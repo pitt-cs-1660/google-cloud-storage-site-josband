@@ -1,7 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [clicked, setClicked] = useState < Boolean > false;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,9 +15,11 @@ function App() {
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => setClicked(true)}
         >
           H2P
         </a>
+        {clicked ? <p>Please don't fail me.</p> : null}
       </header>
     </div>
   );
