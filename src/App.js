@@ -3,7 +3,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [clicked, setClicked] = useState < Boolean > false;
+  const [clicked, setClicked] = useState(false);
 
   return (
     <div className="App">
